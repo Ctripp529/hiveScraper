@@ -1,0 +1,55 @@
+<div class="savedArt articles container">
+<ul>
+    {{#each articles }}
+    <div class="col s12 m7">
+        <div class="card horizontal">
+            <div class="card-image">
+                <img src={{image}}>
+            </div>
+            <div class="card-stacked">
+                <div class="card-content">
+                    <h4 class="panel-title">{{title}}</h4>
+                    <h6>{{category}}</h6>
+                </div>
+                <div class="card-action">
+                    <a class="artLink" target="_blank" href={{link}}>Check it out</a>
+                    <i data-id={{_id}} class="material-icons removeSaved right">delete</i>
+                    <i data-id={{_id}} class="material-icons saved-buttons right">comment</i>
+                </div>
+            </div>
+
+      <!-- Modal -->
+      <div id="noteModal" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="noteModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <!--title including the id of the current article-->
+                      <h4 class="modal-title" id=""><b>Notes:</b></h4>
+                      <!--where notes will be displayed-->
+                      <div>
+                          <ul id="notesBody">
+
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="modal-body">
+                      <div class="form-group">
+
+                          <label for="exampleTextarea">Enter New Note</label>
+                          <!--enter note text-->
+                          <textarea class="form-control" id="notestext" rows="3"></textarea>
+                      </div>
+                      <div><!--enter saved notes here--></div>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button data-id={{_id}}  data-dismiss="modal" id="saveButton" class="btn btn-primary savenote">Save changes</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      {{/each}}
+    </ul>
+
+    </div>

@@ -1,0 +1,31 @@
+<div class="articles container">
+
+  {{#each articles }}
+
+  <div class="col s12 m7">
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src={{image}}>
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <h4 class="panel-title">{{title}}</h4>
+          <br>
+          <h6>Category: {{category}}</h6>
+          <br>
+          <a target="_blank" href={{link}}>Check it out</a>
+        </div>
+        <div class="card-action">
+          <a data-id={{_id}} class="save-article ">
+            <i class="material-icons tooltipped right" data-position="right" data-tooltip="save">favorite</i>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <br />
+  <br /> 
+  {{/each}}
+
+</div>

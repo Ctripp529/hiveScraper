@@ -1,0 +1,11 @@
+body{
+    background-image: url(../images/jj-ying-795509-unsplash.jpg);
+    background-size: contain;
+    background-blend-mode: lighten; 
+    background-color: black;
+    font-family: 'Sedgwick Ave', cursive;
+}
+.parallax-container {
+    height: 350px;
+  }
+    
